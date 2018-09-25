@@ -1,2 +1,2 @@
-# AppRadio_Android
-Repositorio de AppRadio para Android
+# AppRadio_iOS
+Repositorio de AppRadio para iOS
