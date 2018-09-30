@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X51-uX-Sc9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Favoritos View-->
+        <scene sceneID="LFa-yn-zw4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="Favoritos View" id="cGa-aI-nb0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ez3-Cf-9Ge">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BZQ-kA-9nG"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Favoritos" id="iCG-4Z-5KN"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsU-8u-i2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2369" y="-147"/>
+        </scene>
+        <!--Segmentos View-->
+        <scene sceneID="suV-Zc-tW6">
+            <objects>
+                <viewController title="Segmentos View" id="WVi-Je-pVo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MH6-7w-hUW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="SLU-1m-Kqs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segmentos" id="2rc-kz-bZd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWJ-dX-4zt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369" y="-917"/>
+        </scene>
+        <!--EmisoraContainer-->
+        <scene sceneID="mo4-ek-QME">
+            <objects>
+                <tabBarController title="EmisoraContainer" id="X51-uX-Sc9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Exp-pn-wqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.39373406767845154" blue="0.35028296709060669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Knc-2w-OQa" kind="relationship" relationship="viewControllers" id="rKF-Sk-O4r"/>
+                        <segue destination="pky-x5-X4A" kind="relationship" relationship="viewControllers" id="LyS-wN-Urv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7r-Th-got" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="-147"/>
+        </scene>
+        <!--Segmentos Navigation-->
+        <scene sceneID="diK-HA-cvD">
+            <objects>
+                <navigationController title="Segmentos Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Knc-2w-OQa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Segmentos" image="navigation_segmentos" id="qMw-U2-OhA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZO8-jz-H2t">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.39284459154961526" blue="0.34769302999764806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WVi-Je-pVo" kind="relationship" relationship="rootViewController" id="lNI-pu-ylL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhC-GH-bSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311" y="-917"/>
+        </scene>
+        <!--Favoritos Navigation-->
+        <scene sceneID="SEK-dH-35Y">
+            <objects>
+                <navigationController title="Favoritos Navigation" automaticallyAdjustsScrollViewInsets="NO" id="pky-x5-X4A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="DKz-yG-Uw6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nN8-JW-iyv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cGa-aI-nb0" kind="relationship" relationship="rootViewController" id="jO1-Hs-kHM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UT9-NL-3N1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="-147"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="navigation_segmentos" width="30" height="39"/>
+    </resources>
 </document>

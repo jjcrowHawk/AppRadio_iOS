@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64BF92842160404400D46843 /* stop_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92792160404400D46843 /* stop_button.png */; };
+		64BF92862160404400D46843 /* navigation_emisora.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927B2160404400D46843 /* navigation_emisora.png */; };
+		64BF92872160404400D46843 /* navigation_favoritos.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927C2160404400D46843 /* navigation_favoritos.png */; };
+		64BF92882160404400D46843 /* navigation_perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927D2160404400D46843 /* navigation_perfil.png */; };
+		64BF92892160404400D46843 /* navigation_segmentos.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927E2160404400D46843 /* navigation_segmentos.png */; };
+		64BF928A2160404400D46843 /* vecina.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927F2160404400D46843 /* vecina.jpeg */; };
+		64BF928B2160404400D46843 /* navigation_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92802160404400D46843 /* navigation_chat.png */; };
+		64BF928C2160404400D46843 /* navigation_noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92812160404400D46843 /* navigation_noticias.png */; };
+		64BF928D2160404500D46843 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92822160404400D46843 /* play_button.png */; };
+		64BF928E2160404500D46843 /* radio_icon_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92832160404400D46843 /* radio_icon_48.png */; };
 		BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */; };
 		BBA2FC71215AF2B6004A8C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC70215AF2B6004A8C03 /* ViewController.swift */; };
 		BBA2FC74215AF2B6004A8C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC72215AF2B6004A8C03 /* Main.storyboard */; };
@@ -34,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64BF92792160404400D46843 /* stop_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_button.png; sourceTree = "<group>"; };
+		64BF927B2160404400D46843 /* navigation_emisora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_emisora.png; sourceTree = "<group>"; };
+		64BF927C2160404400D46843 /* navigation_favoritos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_favoritos.png; sourceTree = "<group>"; };
+		64BF927D2160404400D46843 /* navigation_perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_perfil.png; sourceTree = "<group>"; };
+		64BF927E2160404400D46843 /* navigation_segmentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_segmentos.png; sourceTree = "<group>"; };
+		64BF927F2160404400D46843 /* vecina.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vecina.jpeg; sourceTree = "<group>"; };
+		64BF92802160404400D46843 /* navigation_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_chat.png; sourceTree = "<group>"; };
+		64BF92812160404400D46843 /* navigation_noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_noticias.png; sourceTree = "<group>"; };
+		64BF92822160404400D46843 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		64BF92832160404400D46843 /* radio_icon_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_icon_48.png; sourceTree = "<group>"; };
 		BBA2FC6B215AF2B6004A8C03 /* AppRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA2FC70215AF2B6004A8C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +94,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64BF927721603EBC00D46843 /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				64BF927821603ED200D46843 /* iconos */,
+			);
+			path = Imagenes;
+			sourceTree = "<group>";
+		};
+		64BF927821603ED200D46843 /* iconos */ = {
+			isa = PBXGroup;
+			children = (
+				64BF92802160404400D46843 /* navigation_chat.png */,
+				64BF927B2160404400D46843 /* navigation_emisora.png */,
+				64BF927C2160404400D46843 /* navigation_favoritos.png */,
+				64BF92812160404400D46843 /* navigation_noticias.png */,
+				64BF927D2160404400D46843 /* navigation_perfil.png */,
+				64BF927E2160404400D46843 /* navigation_segmentos.png */,
+				64BF92822160404400D46843 /* play_button.png */,
+				64BF92832160404400D46843 /* radio_icon_48.png */,
+				64BF92792160404400D46843 /* stop_button.png */,
+				64BF927F2160404400D46843 /* vecina.jpeg */,
+			);
+			path = iconos;
+			sourceTree = "<group>";
+		};
 		BBA2FC62215AF2B6004A8C03 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +142,7 @@
 		BBA2FC6D215AF2B6004A8C03 /* AppRadio */ = {
 			isa = PBXGroup;
 			children = (
+				64BF927721603EBC00D46843 /* Imagenes */,
 				BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */,
 				BBA2FC70215AF2B6004A8C03 /* ViewController.swift */,
 				BBA2FC72215AF2B6004A8C03 /* Main.storyboard */,
@@ -232,9 +278,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BF928D2160404500D46843 /* play_button.png in Resources */,
 				BBA2FC79215AF2B6004A8C03 /* LaunchScreen.storyboard in Resources */,
+				64BF92882160404400D46843 /* navigation_perfil.png in Resources */,
 				BBA2FC76215AF2B6004A8C03 /* Assets.xcassets in Resources */,
 				BBA2FC74215AF2B6004A8C03 /* Main.storyboard in Resources */,
+				64BF92892160404400D46843 /* navigation_segmentos.png in Resources */,
+				64BF92872160404400D46843 /* navigation_favoritos.png in Resources */,
+				64BF928E2160404500D46843 /* radio_icon_48.png in Resources */,
+				64BF92862160404400D46843 /* navigation_emisora.png in Resources */,
+				64BF92842160404400D46843 /* stop_button.png in Resources */,
+				64BF928A2160404400D46843 /* vecina.jpeg in Resources */,
+				64BF928B2160404400D46843 /* navigation_chat.png in Resources */,
+				64BF928C2160404400D46843 /* navigation_noticias.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
