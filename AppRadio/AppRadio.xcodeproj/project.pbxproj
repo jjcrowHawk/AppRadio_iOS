@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F167D2162CAD100A71145 /* SegmentosController.swift */; };
 		64BF92842160404400D46843 /* stop_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92792160404400D46843 /* stop_button.png */; };
 		64BF92862160404400D46843 /* navigation_emisora.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927B2160404400D46843 /* navigation_emisora.png */; };
 		64BF92872160404400D46843 /* navigation_favoritos.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927C2160404400D46843 /* navigation_favoritos.png */; };
@@ -18,7 +19,6 @@
 		64BF928D2160404500D46843 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92822160404400D46843 /* play_button.png */; };
 		64BF928E2160404500D46843 /* radio_icon_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92832160404400D46843 /* radio_icon_48.png */; };
 		BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */; };
-		BBA2FC71215AF2B6004A8C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC70215AF2B6004A8C03 /* ViewController.swift */; };
 		BBA2FC74215AF2B6004A8C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC72215AF2B6004A8C03 /* Main.storyboard */; };
 		BBA2FC76215AF2B6004A8C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC75215AF2B6004A8C03 /* Assets.xcassets */; };
 		BBA2FC79215AF2B6004A8C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC77215AF2B6004A8C03 /* LaunchScreen.storyboard */; };
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		643F167D2162CAD100A71145 /* SegmentosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentosController.swift; sourceTree = "<group>"; };
 		64BF92792160404400D46843 /* stop_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_button.png; sourceTree = "<group>"; };
 		64BF927B2160404400D46843 /* navigation_emisora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_emisora.png; sourceTree = "<group>"; };
 		64BF927C2160404400D46843 /* navigation_favoritos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_favoritos.png; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		64BF92832160404400D46843 /* radio_icon_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_icon_48.png; sourceTree = "<group>"; };
 		BBA2FC6B215AF2B6004A8C03 /* AppRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBA2FC70215AF2B6004A8C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BBA2FC73215AF2B6004A8C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBA2FC75215AF2B6004A8C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBA2FC78215AF2B6004A8C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643F167C2162CA4B00A71145 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				643F167D2162CAD100A71145 /* SegmentosController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		64BF927721603EBC00D46843 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,9 +150,9 @@
 		BBA2FC6D215AF2B6004A8C03 /* AppRadio */ = {
 			isa = PBXGroup;
 			children = (
+				643F167C2162CA4B00A71145 /* ViewControllers */,
 				64BF927721603EBC00D46843 /* Imagenes */,
 				BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */,
-				BBA2FC70215AF2B6004A8C03 /* ViewController.swift */,
 				BBA2FC72215AF2B6004A8C03 /* Main.storyboard */,
 				BBA2FC75215AF2B6004A8C03 /* Assets.xcassets */,
 				BBA2FC77215AF2B6004A8C03 /* LaunchScreen.storyboard */,
@@ -240,6 +248,11 @@
 					BBA2FC6A215AF2B6004A8C03 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BBA2FC7E215AF2B6004A8C03 = {
 						CreatedOnToolsVersion = 9.2;
@@ -315,8 +328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA2FC71215AF2B6004A8C03 /* ViewController.swift in Sources */,
 				BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */,
+				643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -470,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -484,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppRadio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovasystem.AppRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppRadio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovasystem.AppRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
