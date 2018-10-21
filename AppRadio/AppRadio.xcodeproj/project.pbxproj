@@ -10,6 +10,10 @@
 		643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F167D2162CAD100A71145 /* SegmentosController.swift */; };
 		64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536C21641CAF00142997 /* NotificationManager.swift */; };
 		64AD5370216488D000142997 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536F216488D000142997 /* RadioPlayer.swift */; };
+		64AD53732164913700142997 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD53722164913700142997 /* Constants.swift */; };
+		64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5374216492FA00142997 /* RestAPIManager.swift */; };
+		64AD5377217C4A9900142997 /* Emisora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5376217C4A9900142997 /* Emisora.swift */; };
+		64AD5379217C5EE000142997 /* Segmento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5378217C5EE000142997 /* Segmento.swift */; };
 		64BF92842160404400D46843 /* stop_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92792160404400D46843 /* stop_button.png */; };
 		64BF92862160404400D46843 /* navigation_emisora.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927B2160404400D46843 /* navigation_emisora.png */; };
 		64BF92872160404400D46843 /* navigation_favoritos.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927C2160404400D46843 /* navigation_favoritos.png */; };
@@ -49,6 +53,10 @@
 		643F167D2162CAD100A71145 /* SegmentosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentosController.swift; sourceTree = "<group>"; };
 		64AD536C21641CAF00142997 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		64AD536F216488D000142997 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
+		64AD53722164913700142997 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		64AD5374216492FA00142997 /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
+		64AD5376217C4A9900142997 /* Emisora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emisora.swift; sourceTree = "<group>"; };
+		64AD5378217C5EE000142997 /* Segmento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segmento.swift; sourceTree = "<group>"; };
 		64BF92792160404400D46843 /* stop_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_button.png; sourceTree = "<group>"; };
 		64BF927B2160404400D46843 /* navigation_emisora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_emisora.png; sourceTree = "<group>"; };
 		64BF927C2160404400D46843 /* navigation_favoritos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_favoritos.png; sourceTree = "<group>"; };
@@ -117,9 +125,21 @@
 		64AD536E2164889100142997 /* Clases */ = {
 			isa = PBXGroup;
 			children = (
+				64AD5371216490FE00142997 /* Models */,
 				64AD536F216488D000142997 /* RadioPlayer.swift */,
+				64AD53722164913700142997 /* Constants.swift */,
+				64AD5374216492FA00142997 /* RestAPIManager.swift */,
 			);
 			path = Clases;
+			sourceTree = "<group>";
+		};
+		64AD5371216490FE00142997 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64AD5376217C4A9900142997 /* Emisora.swift */,
+				64AD5378217C5EE000142997 /* Segmento.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		64BF927721603EBC00D46843 /* Imagenes */ = {
@@ -350,9 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64AD5377217C4A9900142997 /* Emisora.swift in Sources */,
+				64AD53732164913700142997 /* Constants.swift in Sources */,
 				64AD5370216488D000142997 /* RadioPlayer.swift in Sources */,
+				64AD5379217C5EE000142997 /* Segmento.swift in Sources */,
 				64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */,
 				BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */,
+				64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */,
 				643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

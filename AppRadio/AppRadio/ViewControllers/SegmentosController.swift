@@ -73,7 +73,22 @@ class SegmentosController: UIViewController {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
             
-            
+        RestAPIManager.consultarEmisoras(onSuccess: {emisoras in DispatchQueue.main.async {
+            for emisora in emisoras{
+                print("\(emisora)")
+            }
+            }},
+            onError: {error in
+                print("Error \(error) ocurred: \(error.localizedDescription)")
+        })
+        
+        RestAPIManager.consultarSegmentos(onSuccess: {segmentos in DispatchQueue.main.async{
+            for seg in segmentos{
+                print("\(seg)")
+            }
+            }},onError: {error in
+                print("\n Error \(error) ocurred: \(error.localizedDescription)")
+        })
     }
     
     override func didReceiveMemoryWarning() {
