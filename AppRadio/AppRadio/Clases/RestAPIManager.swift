@@ -14,6 +14,7 @@ class RestAPIManager {
         let url = Constants.baseURL + Constants.linkEmisoras
         let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
+        request.addValue("Token 34252ac283cbf2b3657cdd2d743c4adea4420e61", forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
             if err != nil {
@@ -36,9 +37,35 @@ class RestAPIManager {
         let url = Constants.baseURL + Constants.linkSegmentos
         let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
+        request.addValue("Token 34252ac283cbf2b3657cdd2d743c4adea4420e61", forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
             print(data)
+            print(response)
+            if err != nil {
+                onError(err!)
+            }
+            else{
+                do{
+                    let segmentos: [Segmento] = try JSONDecoder().decode([Segmento].self, from: data!)
+                    print(segmentos.count)
+                    onSuccess(segmentos)
+                }
+                catch{
+                    onError(error)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    public static func consultarSegmentosEmisoraDelDia(idEmisora: Int,onSuccess: @escaping ([Segmento])-> Void, onError:@escaping (Error)->Void){
+        let url = Constants.baseURL + String(format: Constants.linkSegmentosEmisoraDelDia, idEmisora)
+        let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        request.addValue("Token 34252ac283cbf2b3657cdd2d743c4adea4420e61", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
             print(response)
             if err != nil {
                 onError(err!)

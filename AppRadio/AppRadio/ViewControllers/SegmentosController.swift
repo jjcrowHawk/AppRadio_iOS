@@ -14,13 +14,17 @@ import UserNotifications
 import MediaPlayer
 
 
-class SegmentosController: UIViewController {
+class SegmentosController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    
+    
+    //Elementos del UI
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var tablaSegmentos: UITableView!
+    
     
     //Propiedades
-    
-    @IBOutlet weak var playButton: UIButton!
-    
-    
     enum playerStateEnum{
         case playing,stopped
     }
@@ -28,7 +32,76 @@ class SegmentosController: UIViewController {
     var playerState: playerStateEnum?
     var player: AVPlayer?
     private var playerItemContext = 0
+    var horariosSegmentos: [Horario] = [Horario]()
+    var dicSegmentos: Dictionary<Horario,Segmento> = Dictionary<Horario,Segmento>()
+    var listaSegmentos: [(Horario,Segmento)] = [(Horario,Segmento)]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.playerState = playerStateEnum.stopped
+        
+        self.player = AVPlayer()
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = CGRect()
+        self.view.layer.addSublayer(playerLayer)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
+            
+        RestAPIManager.consultarEmisoras(onSuccess: {emisoras in DispatchQueue.main.async {
+            for emisora in emisoras{
+                print("\(emisora)")
+            }
+            }},
+            onError: {error in
+                print("Error \(error) ocurred: \(error.localizedDescription)")
+        })
+        
+        RestAPIManager.consultarSegmentosEmisoraDelDia(
+            idEmisora: 2,
+            onSuccess: {segmentos in DispatchQueue.main.async{
+                for seg in segmentos{
+                    print("\(seg)")
+                    
+                    for hor in seg.horarios{
+                        self.dicSegmentos[hor] = seg
+                    }
+                }
+                
+                self.listaSegmentos = self.dicSegmentos.sorted(by: { $0.key.fecha_inicio < $1.key.fecha_inicio })
+                
+                
+                self.tablaSegmentos.reloadData()
+            }},
+            onError: {error in
+                print("\n Error \(error) ocurred: \(error.localizedDescription)")
+            }
+        )
+        
+        tablaSegmentos.delegate = self
+        tablaSegmentos.dataSource = self
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listaSegmentos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "segmentoCell", for: indexPath) as! SegmentoTableViewCell
+        cell.tituloLabel.text = listaSegmentos[indexPath.row].1.nombre
+        //cell.imagenSegmento.image = try UIImage(data: NSData(contentsOf: NSURL(string: segmentos[indexPath.row].imagen)! as URL) as Data)
+        cell.horarioLabel.text = String(format: "%@ - %@", listaSegmentos[indexPath.row].0.fecha_inicio,listaSegmentos[indexPath.row].0.fecha_fin)
+        return cell
+    }
+    
+    
+    /**
+     *  Este metodo manejador incializa el reproductor y empieza la reproduccion del streaming de radio
+     **/
     @IBAction func playVideo(_ sender: AnyObject) {
         
         guard let url = URL(string: "http://str.ecuastreaming.com:9958/") else {
@@ -58,43 +131,10 @@ class SegmentosController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.playerState = playerStateEnum.stopped
-        
-        // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-        
-        self.player = AVPlayer()
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = CGRect()
-        self.view.layer.addSublayer(playerLayer)
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
-            
-        RestAPIManager.consultarEmisoras(onSuccess: {emisoras in DispatchQueue.main.async {
-            for emisora in emisoras{
-                print("\(emisora)")
-            }
-            }},
-            onError: {error in
-                print("Error \(error) ocurred: \(error.localizedDescription)")
-        })
-        
-        RestAPIManager.consultarSegmentos(onSuccess: {segmentos in DispatchQueue.main.async{
-            for seg in segmentos{
-                print("\(seg)")
-            }
-            }},onError: {error in
-                print("\n Error \(error) ocurred: \(error.localizedDescription)")
-        })
-    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+    /**
+     *  Este metodo sirve para obtener el status del reproductor y notificar algun error si existe
+     **/
     override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,

@@ -10,12 +10,13 @@ import Foundation
 
 class Segmento: Codable,CustomStringConvertible{
     
-    //var id: Int
+    var id: Int
     var nombre: String
     var slogan: String
     var descripcion: String
     var idEmisora: Int
     var imagen: String
+    var horarios: [Horario]
     
     var description: String{
         var string = "Segmento{ \n"
@@ -29,4 +30,16 @@ class Segmento: Codable,CustomStringConvertible{
         return string
         
     }
+    
+    required init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? -1
+        self.nombre = try container.decodeIfPresent(String.self, forKey: .nombre) ?? ""
+        self.slogan = try container.decodeIfPresent(String.self, forKey: .slogan) ?? ""
+        self.descripcion = try container.decodeIfPresent(String.self, forKey: .descripcion) ?? ""
+        self.idEmisora = try container.decodeIfPresent(Int.self, forKey: .idEmisora) ?? -1
+        self.imagen = try container.decodeIfPresent(String.self, forKey: .imagen) ?? ""
+        self.horarios = try container.decodeIfPresent([Horario].self, forKey: .horarios) ?? []
+    }
+    
 }

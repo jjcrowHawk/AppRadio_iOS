@@ -14,6 +14,8 @@
 		64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5374216492FA00142997 /* RestAPIManager.swift */; };
 		64AD5377217C4A9900142997 /* Emisora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5376217C4A9900142997 /* Emisora.swift */; };
 		64AD5379217C5EE000142997 /* Segmento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD5378217C5EE000142997 /* Segmento.swift */; };
+		64AD537C2186C1D500142997 /* SegmentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD537B2186C1D500142997 /* SegmentoTableViewCell.swift */; };
+		64AD537E2186CD7D00142997 /* Horario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD537D2186CD7D00142997 /* Horario.swift */; };
 		64BF92842160404400D46843 /* stop_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92792160404400D46843 /* stop_button.png */; };
 		64BF92862160404400D46843 /* navigation_emisora.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927B2160404400D46843 /* navigation_emisora.png */; };
 		64BF92872160404400D46843 /* navigation_favoritos.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF927C2160404400D46843 /* navigation_favoritos.png */; };
@@ -57,6 +59,8 @@
 		64AD5374216492FA00142997 /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		64AD5376217C4A9900142997 /* Emisora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emisora.swift; sourceTree = "<group>"; };
 		64AD5378217C5EE000142997 /* Segmento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segmento.swift; sourceTree = "<group>"; };
+		64AD537B2186C1D500142997 /* SegmentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentoTableViewCell.swift; sourceTree = "<group>"; };
+		64AD537D2186CD7D00142997 /* Horario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horario.swift; sourceTree = "<group>"; };
 		64BF92792160404400D46843 /* stop_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_button.png; sourceTree = "<group>"; };
 		64BF927B2160404400D46843 /* navigation_emisora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_emisora.png; sourceTree = "<group>"; };
 		64BF927C2160404400D46843 /* navigation_favoritos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_favoritos.png; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		643F167C2162CA4B00A71145 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				64AD537A2186C14D00142997 /* ViewCell */,
 				643F167D2162CAD100A71145 /* SegmentosController.swift */,
 			);
 			path = ViewControllers;
@@ -138,8 +143,17 @@
 			children = (
 				64AD5376217C4A9900142997 /* Emisora.swift */,
 				64AD5378217C5EE000142997 /* Segmento.swift */,
+				64AD537D2186CD7D00142997 /* Horario.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		64AD537A2186C14D00142997 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				64AD537B2186C1D500142997 /* SegmentoTableViewCell.swift */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 		64BF927721603EBC00D46843 /* Imagenes */ = {
@@ -376,6 +390,8 @@
 				64AD5379217C5EE000142997 /* Segmento.swift in Sources */,
 				64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */,
 				BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */,
+				64AD537E2186CD7D00142997 /* Horario.swift in Sources */,
+				64AD537C2186C1D500142997 /* SegmentoTableViewCell.swift in Sources */,
 				64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */,
 				643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */,
 			);
