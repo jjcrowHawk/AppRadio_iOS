@@ -15,5 +15,6 @@ class Constants{
     public static let linkEmisoras = "/api/emisoras/"
     public static let linkSegmentos = "/api/segmentos/"
     public static let linkSegmentosEmisoraDelDia = "/api/emisoras/%d/segmentos/today"
+    public static let linkLogIn = "/api/rest-auth/login/"
     
 }

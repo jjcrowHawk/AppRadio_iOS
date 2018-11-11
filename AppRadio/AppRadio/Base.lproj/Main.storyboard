@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X51-uX-Sc9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X51-uX-Sc9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,7 +68,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HH:MM - HH:MM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-rV-E5r">
-                                                    <rect key="frame" x="123" y="52" width="217" height="21"/>
+                                                    <rect key="frame" x="123" y="52" width="170" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="170" id="6pS-w9-qJJ"/>
                                                         <constraint firstAttribute="height" constant="21" id="IPk-ei-4XF"/>
@@ -78,7 +78,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Segmento" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-YO-inD">
-                                                    <rect key="frame" x="123" y="11" width="217" height="21"/>
+                                                    <rect key="frame" x="123" y="11" width="169" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="169" id="NYn-MW-xiZ"/>
                                                     </constraints>
@@ -120,10 +120,99 @@
             </objects>
             <point key="canvasLocation" x="2368.8000000000002" y="-917.09145427286364"/>
         </scene>
+        <!--Register Controller-->
+        <scene sceneID="AGd-fV-gmJ">
+            <objects>
+                <viewController id="zFH-4a-jw7" customClass="RegisterController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6E1-Ax-1lQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Bf-o8-Cty"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kb-3a-HzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="-917"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="hT3-rg-htu">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="7ex-bR-1SZ" customClass="LoginController" customModule="AppRadio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8P5-vX-UuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portada_radio.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-sQ-IqT">
+                                <rect key="frame" x="47" y="40" width="281" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="B0A-A0-y1f"/>
+                                    <constraint firstAttribute="height" constant="186" id="hWo-aZ-uCR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-lj-xF9">
+                                <rect key="frame" x="31" y="306" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNs-hC-EeI">
+                                <rect key="frame" x="31" y="335" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDg-gn-suX">
+                                <rect key="frame" x="31" y="263" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-0C-LwO">
+                                <rect key="frame" x="31" y="393" width="328" height="38"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.23921568627450979" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="INICIAR SESÍON">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickLogin:" destination="7ex-bR-1SZ" eventType="touchUpInside" id="Z5U-2E-sDQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsE-Sc-sCd">
+                                <rect key="frame" x="31" y="234" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="top" secondItem="VK8-dk-0Zj" secondAttribute="top" constant="20" id="EEm-xj-Tiv"/>
+                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="leading" secondItem="VK8-dk-0Zj" secondAttribute="leading" constant="47" id="IcZ-zk-SMA"/>
+                            <constraint firstItem="VK8-dk-0Zj" firstAttribute="trailing" secondItem="uU6-sQ-IqT" secondAttribute="trailing" constant="47" id="d1G-eT-mKW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VK8-dk-0Zj"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="TEM-0C-LwO" id="195-DT-OBO"/>
+                        <outlet property="imgRadio" destination="uU6-sQ-IqT" id="KNo-u7-cm0"/>
+                        <outlet property="tfPassword" destination="MNs-hC-EeI" id="MtS-pM-dmM"/>
+                        <outlet property="tfUsername" destination="eDg-gn-suX" id="TS3-z9-XS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehc-RD-aCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991" y="-147"/>
+        </scene>
         <!--EmisoraContainer-->
         <scene sceneID="mo4-ek-QME">
             <objects>
-                <tabBarController title="EmisoraContainer" id="X51-uX-Sc9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" title="EmisoraContainer" id="X51-uX-Sc9" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Exp-pn-wqw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -188,6 +277,7 @@
     </scenes>
     <resources>
         <image name="navigation_segmentos" width="30" height="39"/>
+        <image name="portada_radio.jpg" width="648" height="433"/>
         <image name="radio_icon_48.png" width="48" height="48"/>
     </resources>
 </document>

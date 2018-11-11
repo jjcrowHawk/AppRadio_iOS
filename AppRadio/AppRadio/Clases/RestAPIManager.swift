@@ -82,4 +82,35 @@ class RestAPIManager {
             }
         }
         task.resume()
-    }}
+    }
+    
+    public static func logIn(usuario: LogInUser,onSuccess: @escaping (Token)-> Void, onError:@escaping (Error)->Void){
+        let url = Constants.baseURL + String(format: Constants.linkLogIn, usuario.getUsername(),usuario.getPassword())
+        let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
+        request.httpMethod = "POST"
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
+            print(data)
+            print(response)
+            if err != nil {
+                onError(err!)
+            }
+            else{
+                do{
+                    let token: Token = try JSONDecoder().decode(Token.self, from: data!)
+                    print(token.getKey())
+                    onSuccess(token)
+                }
+                catch{
+                    onError(error)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+}
+
+
+

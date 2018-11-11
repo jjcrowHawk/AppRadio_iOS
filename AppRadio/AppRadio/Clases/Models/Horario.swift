@@ -32,4 +32,10 @@ class Horario: Codable,CustomStringConvertible,Hashable{
         return lhs === rhs
     }
     
+    required init(fecha_inicio:String, fecha_fin: String, dia: String){
+        self.fecha_inicio=fecha_inicio;
+        self.fecha_fin=fecha_fin;
+        self.dia=dia;
+    }
+    
 }

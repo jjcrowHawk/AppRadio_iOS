@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CB1475219087540059A64D /* portada_radio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04CB1474219087540059A64D /* portada_radio.jpg */; };
+		04CB147721908B350059A64D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147621908B350059A64D /* LoginController.swift */; };
+		04CB147921908D180059A64D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147821908D180059A64D /* RegisterController.swift */; };
+		04CB147B2190AF230059A64D /* LogInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147A2190AF230059A64D /* LogInUser.swift */; };
+		04CB147D2190B2EE0059A64D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147C2190B2EE0059A64D /* Token.swift */; };
 		643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F167D2162CAD100A71145 /* SegmentosController.swift */; };
 		64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536C21641CAF00142997 /* NotificationManager.swift */; };
 		64AD5370216488D000142997 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536F216488D000142997 /* RadioPlayer.swift */; };
@@ -52,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CB1474219087540059A64D /* portada_radio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portada_radio.jpg; sourceTree = "<group>"; };
+		04CB147621908B350059A64D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		04CB147821908D180059A64D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		04CB147A2190AF230059A64D /* LogInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUser.swift; sourceTree = "<group>"; };
+		04CB147C2190B2EE0059A64D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		643F167D2162CAD100A71145 /* SegmentosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentosController.swift; sourceTree = "<group>"; };
 		64AD536C21641CAF00142997 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		64AD536F216488D000142997 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
@@ -115,6 +125,8 @@
 			children = (
 				64AD537A2186C14D00142997 /* ViewCell */,
 				643F167D2162CAD100A71145 /* SegmentosController.swift */,
+				04CB147621908B350059A64D /* LoginController.swift */,
+				04CB147821908D180059A64D /* RegisterController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,6 +156,8 @@
 				64AD5376217C4A9900142997 /* Emisora.swift */,
 				64AD5378217C5EE000142997 /* Segmento.swift */,
 				64AD537D2186CD7D00142997 /* Horario.swift */,
+				04CB147A2190AF230059A64D /* LogInUser.swift */,
+				04CB147C2190B2EE0059A64D /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 		64BF927721603EBC00D46843 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				04CB1474219087540059A64D /* portada_radio.jpg */,
 				64BF927821603ED200D46843 /* iconos */,
 			);
 			path = Imagenes;
@@ -358,6 +373,7 @@
 				64BF92862160404400D46843 /* navigation_emisora.png in Resources */,
 				64BF92842160404400D46843 /* stop_button.png in Resources */,
 				64BF928A2160404400D46843 /* vecina.jpeg in Resources */,
+				04CB1475219087540059A64D /* portada_radio.jpg in Resources */,
 				64BF928B2160404400D46843 /* navigation_chat.png in Resources */,
 				64BF928C2160404400D46843 /* navigation_noticias.png in Resources */,
 			);
@@ -384,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CB147721908B350059A64D /* LoginController.swift in Sources */,
 				64AD5377217C4A9900142997 /* Emisora.swift in Sources */,
 				64AD53732164913700142997 /* Constants.swift in Sources */,
 				64AD5370216488D000142997 /* RadioPlayer.swift in Sources */,
@@ -391,8 +408,11 @@
 				64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */,
 				BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */,
 				64AD537E2186CD7D00142997 /* Horario.swift in Sources */,
+				04CB147921908D180059A64D /* RegisterController.swift in Sources */,
+				04CB147D2190B2EE0059A64D /* Token.swift in Sources */,
 				64AD537C2186C1D500142997 /* SegmentoTableViewCell.swift in Sources */,
 				64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */,
+				04CB147B2190AF230059A64D /* LogInUser.swift in Sources */,
 				643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

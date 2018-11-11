@@ -32,4 +32,17 @@ class Emisora: Codable,CustomStringConvertible{
         string += "}\n"
         return string
     }
+    required init(id:  Int, nombre:String, frecuencia: String, url_streaming: String, sitioWeb:String, dirrecion: String, descripcion:String, ciudad:String,
+         provincia:String,logotipo:String){
+        self.id=id;
+        self.nombre=nombre;
+        self.frecuencia_dial = frecuencia;
+        self.url_streaming=url_streaming;
+        self.sitio_web=sitioWeb;
+        self.direccion=dirrecion;
+        self.descripcion=descripcion;
+        self.ciudad = ciudad;
+        self.provincia = provincia;
+        self.logotipo = logotipo;
+    }
 }
