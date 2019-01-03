@@ -13,8 +13,23 @@ import UIKit
 class LoginController : UIViewController{
     
     //Elementos del UI
-    @IBOutlet var tfUsername : UITextField!
-    @IBOutlet var tfPassword : UITextField!
+    @IBOutlet var tfUsername : TextFieldLogin!{
+        didSet {
+            tfUsername.tintColor = UIColor.lightGray
+            tfUsername.setIcon(UIImage(named: "icon_user")!)
+            tfUsername.setPlaceholder("Usuario")
+        }
+    }
+    
+    @IBOutlet var tfPassword : TextFieldLogin!{
+        didSet {
+            tfPassword.tintColor = UIColor.lightGray
+            tfPassword.setIcon(UIImage(named: "icon_password")!)
+            tfPassword.setPlaceholder("Contraseña")
+        }
+    }
+    
+    
     @IBOutlet var btnLogin : UIButton!
     
     @IBOutlet weak var imgRadio: UIImageView!
@@ -26,6 +41,9 @@ class LoginController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,13 +61,15 @@ class LoginController : UIViewController{
         RestAPIManager.logIn(
             usuario: user,
             onSuccess: {segmentos in DispatchQueue.main.async{
+                
+                
+                }
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! SegmentosController
                 self.present(vc, animated: true, completion: nil)
-                
-            }},
+            },
             onError: {error in
                 print("\n Error \(error) ocurred: \(error.localizedDescription)")
-        }
+            }
         )
         
     }

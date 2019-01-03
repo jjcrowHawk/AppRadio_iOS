@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X51-uX-Sc9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gL0-jF-qNp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -135,66 +135,131 @@
             </objects>
             <point key="canvasLocation" x="-604" y="-917"/>
         </scene>
+        <!--Splash Controller-->
+        <scene sceneID="7zU-Yi-syQ">
+            <objects>
+                <viewController id="gL0-jF-qNp" customClass="SplashController" customModule="AppRadio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdn-EC-Swy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7z-4i-Ccz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a7z-4i-Ccz" firstAttribute="bottom" secondItem="1hg-gl-zLZ" secondAttribute="bottom" id="Ivz-hc-Bea"/>
+                            <constraint firstItem="a7z-4i-Ccz" firstAttribute="top" secondItem="bdn-EC-Swy" secondAttribute="top" id="Y13-ef-tLL"/>
+                            <constraint firstAttribute="trailing" secondItem="a7z-4i-Ccz" secondAttribute="trailing" id="vSc-to-mLS"/>
+                            <constraint firstItem="a7z-4i-Ccz" firstAttribute="leading" secondItem="bdn-EC-Swy" secondAttribute="leading" id="wUh-LN-2O7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1hg-gl-zLZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYc-Ft-IZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1842.4000000000001" y="-148.87556221889056"/>
+        </scene>
         <!--Login Controller-->
         <scene sceneID="hT3-rg-htu">
             <objects>
-                <viewController storyboardIdentifier="Login" id="7ex-bR-1SZ" customClass="LoginController" customModule="AppRadio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="7ex-bR-1SZ" customClass="LoginController" customModule="AppRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P5-vX-UuJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portada_radio.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-sQ-IqT">
-                                <rect key="frame" x="47" y="40" width="281" height="186"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-sQ-IqT">
+                                <rect key="frame" x="-1" y="40" width="375" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="281" id="B0A-A0-y1f"/>
+                                    <constraint firstAttribute="width" constant="375" id="B0A-A0-y1f"/>
                                     <constraint firstAttribute="height" constant="186" id="hWo-aZ-uCR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-lj-xF9">
-                                <rect key="frame" x="31" y="306" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresar con" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-lj-xF9">
+                                <rect key="frame" x="156" y="508" width="65.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNs-hC-EeI">
-                                <rect key="frame" x="31" y="335" width="328" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNs-hC-EeI" customClass="TextFieldLogin" customModule="AppRadio" customModuleProvider="target">
+                                <rect key="frame" x="62" y="335" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jut-FH-vfY"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDg-gn-suX">
-                                <rect key="frame" x="31" y="263" width="328" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDg-gn-suX" customClass="TextFieldLogin" customModule="AppRadio" customModuleProvider="target">
+                                <rect key="frame" x="62" y="263" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="F7a-cc-DRC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-0C-LwO">
-                                <rect key="frame" x="31" y="393" width="328" height="38"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.23921568627450979" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="INICIAR SESÍON">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-0C-LwO" customClass="RoundedButton" customModule="AppRadio" customModuleProvider="target">
+                                <rect key="frame" x="112" y="413" width="150" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7SA-gq-ALf"/>
+                                </constraints>
+                                <state key="normal" title="Iniciar sesión">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onClickLogin:" destination="7ex-bR-1SZ" eventType="touchUpInside" id="Z5U-2E-sDQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsE-Sc-sCd">
-                                <rect key="frame" x="31" y="234" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TZ2-oG-6pc">
+                                <rect key="frame" x="150" y="528.5" width="76" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Y5-Si-Gb2">
+                                        <rect key="frame" x="0.0" y="0.0" width="14" height="30"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="hoY-aj-jTi">
+                                        <rect key="frame" x="29" y="0.0" width="47" height="30"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-5Q-41R">
+                                <rect key="frame" x="149" y="604" width="78" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zTQ-nm-vOj"/>
+                                </constraints>
+                                <state key="normal" title="Registrarse">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidaste tu contraseña?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsE-Sc-sCd">
+                                <rect key="frame" x="124.5" y="449" width="125.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="top" secondItem="VK8-dk-0Zj" secondAttribute="top" constant="20" id="EEm-xj-Tiv"/>
-                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="leading" secondItem="VK8-dk-0Zj" secondAttribute="leading" constant="47" id="IcZ-zk-SMA"/>
-                            <constraint firstItem="VK8-dk-0Zj" firstAttribute="trailing" secondItem="uU6-sQ-IqT" secondAttribute="trailing" constant="47" id="d1G-eT-mKW"/>
+                            <constraint firstItem="I9B-lj-xF9" firstAttribute="leading" secondItem="VK8-dk-0Zj" secondAttribute="leading" constant="156" id="1aa-BO-UBb"/>
+                            <constraint firstItem="eDg-gn-suX" firstAttribute="trailing" secondItem="MNs-hC-EeI" secondAttribute="trailing" id="4oa-oj-gYJ"/>
+                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="centerX" secondItem="eDg-gn-suX" secondAttribute="centerX" id="6wf-gs-LZB"/>
+                            <constraint firstItem="TZ2-oG-6pc" firstAttribute="centerX" secondItem="e5w-5Q-41R" secondAttribute="centerX" id="ARH-qt-EDm"/>
+                            <constraint firstItem="I9B-lj-xF9" firstAttribute="top" secondItem="AsE-Sc-sCd" secondAttribute="bottom" constant="47" id="Ag4-8N-1db"/>
+                            <constraint firstItem="TEM-0C-LwO" firstAttribute="leading" secondItem="VK8-dk-0Zj" secondAttribute="leading" constant="112" id="Kbl-kv-eah"/>
+                            <constraint firstItem="TEM-0C-LwO" firstAttribute="top" secondItem="MNs-hC-EeI" secondAttribute="bottom" constant="48" id="OC4-1t-RsE"/>
+                            <constraint firstItem="eDg-gn-suX" firstAttribute="leading" secondItem="MNs-hC-EeI" secondAttribute="leading" id="Qcc-Ej-2YK"/>
+                            <constraint firstItem="TZ2-oG-6pc" firstAttribute="centerX" secondItem="8P5-vX-UuJ" secondAttribute="centerX" id="SdD-0D-cg1"/>
+                            <constraint firstItem="uU6-sQ-IqT" firstAttribute="top" secondItem="VK8-dk-0Zj" secondAttribute="top" constant="20" id="abb-IT-e9o"/>
+                            <constraint firstItem="MNs-hC-EeI" firstAttribute="top" secondItem="eDg-gn-suX" secondAttribute="bottom" constant="42" id="b3Z-pJ-D4q"/>
+                            <constraint firstItem="eDg-gn-suX" firstAttribute="centerX" secondItem="8P5-vX-UuJ" secondAttribute="centerX" id="djD-SF-2nr"/>
+                            <constraint firstItem="TZ2-oG-6pc" firstAttribute="top" secondItem="I9B-lj-xF9" secondAttribute="bottom" constant="7" id="etL-Ft-akE"/>
+                            <constraint firstItem="TEM-0C-LwO" firstAttribute="centerX" secondItem="AsE-Sc-sCd" secondAttribute="centerX" id="fec-zp-ISF"/>
+                            <constraint firstItem="MNs-hC-EeI" firstAttribute="centerX" secondItem="TEM-0C-LwO" secondAttribute="centerX" id="jib-J8-5ZC"/>
+                            <constraint firstItem="eDg-gn-suX" firstAttribute="leading" secondItem="VK8-dk-0Zj" secondAttribute="leading" constant="62" id="mAZ-jO-ihY"/>
+                            <constraint firstItem="AsE-Sc-sCd" firstAttribute="top" secondItem="TEM-0C-LwO" secondAttribute="bottom" constant="11" id="mEj-Nu-Opb"/>
+                            <constraint firstItem="e5w-5Q-41R" firstAttribute="top" secondItem="TZ2-oG-6pc" secondAttribute="bottom" constant="46" id="nrR-qM-XBn"/>
+                            <constraint firstItem="eDg-gn-suX" firstAttribute="top" secondItem="uU6-sQ-IqT" secondAttribute="bottom" constant="37" id="wTf-QU-4gM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VK8-dk-0Zj"/>
                     </view>
@@ -207,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehc-RD-aCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-991" y="-147"/>
+            <point key="canvasLocation" x="-991.20000000000005" y="-147.07646176911544"/>
         </scene>
         <!--EmisoraContainer-->
         <scene sceneID="mo4-ek-QME">
@@ -276,8 +341,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebook.png" width="14" height="29"/>
+        <image name="google.png" width="47" height="30"/>
         <image name="navigation_segmentos" width="30" height="39"/>
-        <image name="portada_radio.jpg" width="648" height="433"/>
         <image name="radio_icon_48.png" width="48" height="48"/>
+        <image name="radio_logo.png" width="935" height="381"/>
+        <image name="splash_screen.png" width="936" height="1667"/>
     </resources>
 </document>

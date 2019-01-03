@@ -85,11 +85,59 @@ class RestAPIManager {
     }
     
     public static func logIn(usuario: LogInUser,onSuccess: @escaping (Token)-> Void, onError:@escaping (Error)->Void){
-        let url = Constants.baseURL + String(format: Constants.linkLogIn, usuario.getUsername(),usuario.getPassword())
-        let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
+        let parameters = ["username": usuario.getUsername(), "email": "", "password": usuario.getPassword() ]
+        
+        //let url = Constants.baseURL + String(format: Constants.linkLogIn, usuario.getUsername(),usuario.getPassword())
+        let url = URL(string: Constants.baseURL + Constants.linkLogIn)!
+        
+        //let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)
+        var request = URLRequest(url: url)
+        
         request.httpMethod = "POST"
         
         let session = URLSession.shared
+        
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        //create dataTask using the session object to send data to the server
+        /*let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+            print(data)
+            print(response)
+            guard error == nil else {
+                return
+            }
+            guard let data = data else {
+                
+                return
+            }
+            do {
+                //create json object from data
+                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                    print(json)
+                    // handle json...
+                }
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        })
+        
+        task.resume()*/
+        
+        
+        
+        
+        
+        
+        
         let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
             print(data)
             print(response)
