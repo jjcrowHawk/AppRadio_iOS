@@ -40,7 +40,6 @@ class SegmentosController: UIViewController,UITableViewDelegate,UITableViewDataS
         super.viewDidLoad()
         
         self.playerState = playerStateEnum.stopped
-        
         self.player = AVPlayer()
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = CGRect()

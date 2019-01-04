@@ -48,6 +48,7 @@
 		BBA2FC79215AF2B6004A8C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC77215AF2B6004A8C03 /* LaunchScreen.storyboard */; };
 		BBA2FC84215AF2B6004A8C03 /* AppRadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC83215AF2B6004A8C03 /* AppRadioTests.swift */; };
 		BBA2FC8F215AF2B6004A8C03 /* AppRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC8E215AF2B6004A8C03 /* AppRadioUITests.swift */; };
+		BBC36C5D21DFF7C6006951CB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC36C5C21DFF7C6006951CB /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		BBA2FC8A215AF2B6004A8C03 /* AppRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2FC8E215AF2B6004A8C03 /* AppRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRadioUITests.swift; sourceTree = "<group>"; };
 		BBA2FC90215AF2B6004A8C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBC36C5C21DFF7C6006951CB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				040A3F6A21DDD01D00A08C99 /* RoundedButton.swift */,
 				040A3F6C21DDD94A00A08C99 /* TextFieldLogin.swift */,
 				045A0B7921DF03EF004C2149 /* TextFieldRegister.swift */,
+				BBC36C5C21DFF7C6006951CB /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045A0B7A21DF03EF004C2149 /* TextFieldRegister.swift in Sources */,
+				BBC36C5D21DFF7C6006951CB /* Colors.swift in Sources */,
 				04CB147721908B350059A64D /* LoginController.swift in Sources */,
 				64AD5377217C4A9900142997 /* Emisora.swift in Sources */,
 				64AD53732164913700142997 /* Constants.swift in Sources */,
