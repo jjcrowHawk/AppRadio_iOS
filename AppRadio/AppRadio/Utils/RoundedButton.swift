@@ -15,8 +15,6 @@ class RoundedButton : UIButton {
         super.awakeFromNib()
         
         layer.borderWidth = 1/UIScreen.main.nativeScale
-        
-       
         contentEdgeInsets = UIEdgeInsets(top: 0,left: 16,bottom: 0,right: 16)
         
     }

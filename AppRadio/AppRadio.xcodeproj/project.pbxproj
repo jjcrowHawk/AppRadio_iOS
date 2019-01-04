@@ -16,6 +16,8 @@
 		040A3F6D21DDD94A00A08C99 /* TextFieldLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3F6C21DDD94A00A08C99 /* TextFieldLogin.swift */; };
 		040A3F7321DDEA8500A08C99 /* icon_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 040A3F7221DDEA8400A08C99 /* icon_user.png */; };
 		040A3F7521DDEB4C00A08C99 /* icon_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 040A3F7421DDEB4B00A08C99 /* icon_password.png */; };
+		045A0B7A21DF03EF004C2149 /* TextFieldRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A0B7921DF03EF004C2149 /* TextFieldRegister.swift */; };
+		045A0B7C21DF120A004C2149 /* RegisterTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A0B7B21DF120A004C2149 /* RegisterTwoController.swift */; };
 		04CB1475219087540059A64D /* portada_radio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04CB1474219087540059A64D /* portada_radio.jpg */; };
 		04CB147721908B350059A64D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147621908B350059A64D /* LoginController.swift */; };
 		04CB147921908D180059A64D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147821908D180059A64D /* RegisterController.swift */; };
@@ -75,6 +77,8 @@
 		040A3F6C21DDD94A00A08C99 /* TextFieldLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLogin.swift; sourceTree = "<group>"; };
 		040A3F7221DDEA8400A08C99 /* icon_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user.png; sourceTree = "<group>"; };
 		040A3F7421DDEB4B00A08C99 /* icon_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_password.png; sourceTree = "<group>"; };
+		045A0B7921DF03EF004C2149 /* TextFieldRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldRegister.swift; sourceTree = "<group>"; };
+		045A0B7B21DF120A004C2149 /* RegisterTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTwoController.swift; sourceTree = "<group>"; };
 		04CB1474219087540059A64D /* portada_radio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portada_radio.jpg; sourceTree = "<group>"; };
 		04CB147621908B350059A64D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		04CB147821908D180059A64D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				04CB147621908B350059A64D /* LoginController.swift */,
 				04CB147821908D180059A64D /* RegisterController.swift */,
 				040A3F6021DDB76200A08C99 /* SplashController.swift */,
+				045A0B7B21DF120A004C2149 /* RegisterTwoController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				64AD536C21641CAF00142997 /* NotificationManager.swift */,
 				040A3F6A21DDD01D00A08C99 /* RoundedButton.swift */,
 				040A3F6C21DDD94A00A08C99 /* TextFieldLogin.swift */,
+				045A0B7921DF03EF004C2149 /* TextFieldRegister.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045A0B7A21DF03EF004C2149 /* TextFieldRegister.swift in Sources */,
 				04CB147721908B350059A64D /* LoginController.swift in Sources */,
 				64AD5377217C4A9900142997 /* Emisora.swift in Sources */,
 				64AD53732164913700142997 /* Constants.swift in Sources */,
@@ -448,6 +455,7 @@
 				040A3F6B21DDD01D00A08C99 /* RoundedButton.swift in Sources */,
 				64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */,
 				04CB147B2190AF230059A64D /* LogInUser.swift in Sources */,
+				045A0B7C21DF120A004C2149 /* RegisterTwoController.swift in Sources */,
 				643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */,
 				040A3F6121DDB76200A08C99 /* SplashController.swift in Sources */,
 			);

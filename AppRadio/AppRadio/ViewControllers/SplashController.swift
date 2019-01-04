@@ -25,7 +25,7 @@ class SplashController : UIViewController{
         super.viewDidAppear(animated)
         
         let second: Double = 1000000
-        usleep(useconds_t(5 * second)) //will sleep for 2 milliseconds (.002 seconds)
+        usleep(useconds_t(3 * second)) //will sleep for 30000000 milliseconds (3 seconds)
         
         // Safe Present
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as? LoginController

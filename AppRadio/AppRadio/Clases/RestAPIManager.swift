@@ -108,7 +108,7 @@ class RestAPIManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         //create dataTask using the session object to send data to the server
-        /*let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             print(data)
             print(response)
             guard error == nil else {
@@ -130,14 +130,14 @@ class RestAPIManager {
             }
         })
         
-        task.resume()*/
+        task.resume()
         
         
         
         
         
         
-        
+        /*
         let task = session.dataTask(with: request as URLRequest) { (data, response, err) -> Void in
             print(data)
             print(response)
@@ -155,7 +155,7 @@ class RestAPIManager {
                 }
             }
         }
-        task.resume()
+        task.resume()*/
     }
     
 }
