@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" ~> 4.8
+github "Alamofire/AlamofireImage" ~> 3.2
+github "tristanhimmelman/ObjectMapper" ~> 3.4
+github "tristanhimmelman/AlamofireObjectMapper" ~> 5.2

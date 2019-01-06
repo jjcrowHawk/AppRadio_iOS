@@ -24,6 +24,13 @@
 		04CB147B2190AF230059A64D /* LogInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147A2190AF230059A64D /* LogInUser.swift */; };
 		04CB147D2190B2EE0059A64D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147C2190B2EE0059A64D /* Token.swift */; };
 		643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F167D2162CAD100A71145 /* SegmentosController.swift */; };
+		645EA28221E1866400E813D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645EA28021E1866300E813D5 /* Alamofire.framework */; };
+		645EA28321E1866400E813D5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645EA28121E1866300E813D5 /* AlamofireImage.framework */; };
+		6491A2FC21E2937500E890D8 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6491A2FA21E2937500E890D8 /* AlamofireObjectMapper.framework */; };
+		6491A2FD21E2937500E890D8 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6491A2FB21E2937500E890D8 /* ObjectMapper.framework */; };
+		6491A2FF21E29C8400E890D8 /* BottomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6491A2FE21E29C8400E890D8 /* BottomNavController.swift */; };
+		6491A30421E2A27D00E890D8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6491A30221E2A27D00E890D8 /* iCarousel.m */; };
+		6491A30621E2A2BC00E890D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6491A30521E2A2BC00E890D8 /* QuartzCore.framework */; };
 		64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536C21641CAF00142997 /* NotificationManager.swift */; };
 		64AD5370216488D000142997 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD536F216488D000142997 /* RadioPlayer.swift */; };
 		64AD53732164913700142997 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD53722164913700142997 /* Constants.swift */; };
@@ -42,6 +49,7 @@
 		64BF928C2160404400D46843 /* navigation_noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92812160404400D46843 /* navigation_noticias.png */; };
 		64BF928D2160404500D46843 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92822160404400D46843 /* play_button.png */; };
 		64BF928E2160404500D46843 /* radio_icon_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BF92832160404400D46843 /* radio_icon_48.png */; };
+		64F292DE21E1DBBC00E465CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F292DD21E1DBBC00E465CE /* HomeViewController.swift */; };
 		BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */; };
 		BBA2FC74215AF2B6004A8C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC72215AF2B6004A8C03 /* Main.storyboard */; };
 		BBA2FC76215AF2B6004A8C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA2FC75215AF2B6004A8C03 /* Assets.xcassets */; };
@@ -86,6 +94,15 @@
 		04CB147A2190AF230059A64D /* LogInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUser.swift; sourceTree = "<group>"; };
 		04CB147C2190B2EE0059A64D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		643F167D2162CAD100A71145 /* SegmentosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentosController.swift; sourceTree = "<group>"; };
+		645EA28021E1866300E813D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		645EA28121E1866300E813D5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		6491A2FA21E2937500E890D8 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		6491A2FB21E2937500E890D8 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		6491A2FE21E29C8400E890D8 /* BottomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavController.swift; sourceTree = "<group>"; };
+		6491A30121E2A27C00E890D8 /* AppRadio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppRadio-Bridging-Header.h"; sourceTree = "<group>"; };
+		6491A30221E2A27D00E890D8 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = "../../../../../Downloads/nicklockwood-iCarousel-c9e043e/iCarousel/iCarousel.m"; sourceTree = "<group>"; };
+		6491A30321E2A27D00E890D8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = "../../../../../Downloads/nicklockwood-iCarousel-c9e043e/iCarousel/iCarousel.h"; sourceTree = "<group>"; };
+		6491A30521E2A2BC00E890D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		64AD536C21641CAF00142997 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		64AD536F216488D000142997 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
 		64AD53722164913700142997 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -104,6 +121,7 @@
 		64BF92812160404400D46843 /* navigation_noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_noticias.png; sourceTree = "<group>"; };
 		64BF92822160404400D46843 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
 		64BF92832160404400D46843 /* radio_icon_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_icon_48.png; sourceTree = "<group>"; };
+		64F292DD21E1DBBC00E465CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BBA2FC6B215AF2B6004A8C03 /* AppRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2FC6E215AF2B6004A8C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA2FC73215AF2B6004A8C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +142,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6491A30621E2A2BC00E890D8 /* QuartzCore.framework in Frameworks */,
+				6491A2FC21E2937500E890D8 /* AlamofireObjectMapper.framework in Frameworks */,
+				6491A2FD21E2937500E890D8 /* ObjectMapper.framework in Frameworks */,
+				645EA28221E1866400E813D5 /* Alamofire.framework in Frameworks */,
+				645EA28321E1866400E813D5 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +176,32 @@
 				04CB147821908D180059A64D /* RegisterController.swift */,
 				040A3F6021DDB76200A08C99 /* SplashController.swift */,
 				045A0B7B21DF120A004C2149 /* RegisterTwoController.swift */,
+				64F292DD21E1DBBC00E465CE /* HomeViewController.swift */,
+				6491A2FE21E29C8400E890D8 /* BottomNavController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		645EA27F21E1866100E813D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6491A30521E2A2BC00E890D8 /* QuartzCore.framework */,
+				6491A2FA21E2937500E890D8 /* AlamofireObjectMapper.framework */,
+				6491A2FB21E2937500E890D8 /* ObjectMapper.framework */,
+				645EA28021E1866300E813D5 /* Alamofire.framework */,
+				645EA28121E1866300E813D5 /* AlamofireImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6491A30021E2A25200E890D8 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				6491A30321E2A27D00E890D8 /* iCarousel.h */,
+				6491A30221E2A27D00E890D8 /* iCarousel.m */,
+				6491A30121E2A27C00E890D8 /* AppRadio-Bridging-Header.h */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 		64AD536B21641C8500142997 /* Utils */ = {
@@ -239,6 +286,7 @@
 				BBA2FC82215AF2B6004A8C03 /* AppRadioTests */,
 				BBA2FC8D215AF2B6004A8C03 /* AppRadioUITests */,
 				BBA2FC6C215AF2B6004A8C03 /* Products */,
+				645EA27F21E1866100E813D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +303,7 @@
 		BBA2FC6D215AF2B6004A8C03 /* AppRadio */ = {
 			isa = PBXGroup;
 			children = (
+				6491A30021E2A25200E890D8 /* Libs */,
 				64AD536E2164889100142997 /* Clases */,
 				64AD536B21641C8500142997 /* Utils */,
 				643F167C2162CA4B00A71145 /* ViewControllers */,
@@ -296,6 +345,7 @@
 				BBA2FC67215AF2B6004A8C03 /* Sources */,
 				BBA2FC68215AF2B6004A8C03 /* Frameworks */,
 				BBA2FC69215AF2B6004A8C03 /* Resources */,
+				645EA28421E186C600E813D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -354,6 +404,7 @@
 				TargetAttributes = {
 					BBA2FC6A215AF2B6004A8C03 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -437,6 +488,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		645EA28421E186C600E813D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBA2FC67215AF2B6004A8C03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -446,7 +517,9 @@
 				BBC36C5D21DFF7C6006951CB /* Colors.swift in Sources */,
 				04CB147721908B350059A64D /* LoginController.swift in Sources */,
 				64AD5377217C4A9900142997 /* Emisora.swift in Sources */,
+				6491A30421E2A27D00E890D8 /* iCarousel.m in Sources */,
 				64AD53732164913700142997 /* Constants.swift in Sources */,
+				64F292DE21E1DBBC00E465CE /* HomeViewController.swift in Sources */,
 				64AD5370216488D000142997 /* RadioPlayer.swift in Sources */,
 				64AD5379217C5EE000142997 /* Segmento.swift in Sources */,
 				64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */,
@@ -457,6 +530,7 @@
 				040A3F6D21DDD94A00A08C99 /* TextFieldLogin.swift in Sources */,
 				64AD537C2186C1D500142997 /* SegmentoTableViewCell.swift in Sources */,
 				040A3F6B21DDD01D00A08C99 /* RoundedButton.swift in Sources */,
+				6491A2FF21E29C8400E890D8 /* BottomNavController.swift in Sources */,
 				64AD5375216492FA00142997 /* RestAPIManager.swift in Sources */,
 				04CB147B2190AF230059A64D /* LogInUser.swift in Sources */,
 				045A0B7C21DF120A004C2149 /* RegisterTwoController.swift in Sources */,
@@ -627,15 +701,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AppRadio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovasystem.AppRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRadio/Libs/AppRadio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,15 +726,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AppRadio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovasystem.AppRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRadio/Libs/AppRadio-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

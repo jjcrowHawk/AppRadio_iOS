@@ -13,7 +13,6 @@ import AVFoundation
 import UserNotifications
 import MediaPlayer
 
-
 class SegmentosController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
