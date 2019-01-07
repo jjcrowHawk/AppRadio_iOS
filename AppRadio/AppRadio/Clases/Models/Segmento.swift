@@ -7,17 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Segmento: Codable,CustomStringConvertible{
+
+class Segmento : NSObject, NSCoding, Mappable{
     
-    var id: Int
-    var nombre: String
-    var slogan: String
-    var descripcion: String
-    var idEmisora: Int
-    var imagen: String
-    var horarios: [Horario]
+    var descripcion : String?
+    var emisora : Emisora?
+    var horarios : [Horario]?
+    var id : Int?
+    var idEmisora : Int?
+    var imagen : String?
+    var nombre : String?
     
+    override
     var description: String{
         var string = "Segmento{ \n"
         let mirror = Mirror(reflecting: self)
@@ -31,15 +34,68 @@ class Segmento: Codable,CustomStringConvertible{
         
     }
     
-    required init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? -1
-        self.nombre = try container.decodeIfPresent(String.self, forKey: .nombre) ?? ""
-        self.slogan = try container.decodeIfPresent(String.self, forKey: .slogan) ?? ""
-        self.descripcion = try container.decodeIfPresent(String.self, forKey: .descripcion) ?? ""
-        self.idEmisora = try container.decodeIfPresent(Int.self, forKey: .idEmisora) ?? -1
-        self.imagen = try container.decodeIfPresent(String.self, forKey: .imagen) ?? ""
-        self.horarios = try container.decodeIfPresent([Horario].self, forKey: .horarios) ?? []
+    class func newInstance(map: Map) -> Mappable?{
+        return Segmento()
+    }
+    private override init(){}
+    required init?(map: Map){}
+    
+    func mapping(map: Map)
+    {
+        descripcion <- map["descripcion"]
+        emisora <- map["emisora"]
+        horarios <- map["horarios"]
+        id <- map["id"]
+        idEmisora <- map["idEmisora"]
+        imagen <- map["imagen"]
+        nombre <- map["nombre"]
+        
+    }
+    
+    /**
+     * NSCoding required initializer.
+     * Fills the data from the passed decoder
+     */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+        descripcion = aDecoder.decodeObject(forKey: "descripcion") as? String
+        emisora = aDecoder.decodeObject(forKey: "emisora") as? Emisora
+        horarios = aDecoder.decodeObject(forKey: "horarios") as? [Horario]
+        id = aDecoder.decodeObject(forKey: "id") as? Int
+        idEmisora = aDecoder.decodeObject(forKey: "idEmisora") as? Int
+        imagen = aDecoder.decodeObject(forKey: "imagen") as? String
+        nombre = aDecoder.decodeObject(forKey: "nombre") as? String
+        
+    }
+    
+    /**
+     * NSCoding required method.
+     * Encodes mode properties into the decoder
+     */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if descripcion != nil{
+            aCoder.encodeConditionalObject(descripcion, forKey: "descripcion")
+        }
+        if emisora != nil{
+            aCoder.encode(emisora, forKey: "emisora")
+        }
+        if horarios != nil{
+            aCoder.encode(horarios, forKey: "horarios")
+        }
+        if id != nil{
+            aCoder.encodeConditionalObject(id, forKey: "id")
+        }
+        if idEmisora != nil{
+            aCoder.encodeConditionalObject(idEmisora, forKey: "idEmisora")
+        }
+        if imagen != nil{
+            aCoder.encodeConditionalObject(imagen, forKey: "imagen")
+        }
+        if nombre != nil{
+            aCoder.encodeConditionalObject(nombre, forKey: "nombre")
+        }
+        
     }
     
 }

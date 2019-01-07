@@ -58,6 +58,27 @@ class RestAPIManager {
         }
     }
     
+    public static func obtenerSegmentosDelDia(onSuccess: @escaping ([Segmento])->Void, onError:@escaping (Error)->Void){
+        let headers: HTTPHeaders = [
+            "Authorization": "Token 34252ac283cbf2b3657cdd2d743c4adea4420e61",
+            "Accept": "application/json",
+            "Content": "application/json"
+        ]
+        let url = Constants.baseURL + Constants.linkSegmentosDelDia
+        Alamofire.request(url, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+            .validate()
+            .responseArray{(response: DataResponse<[Segmento]>) in
+                
+                switch response.result{
+                case .success:
+                    onSuccess(response.result.value!)
+                    
+                case .failure(let error):
+                    onError(error)
+                }
+        }
+    }
+    
     public static func consultarSegmentos(onSuccess: @escaping ([Segmento])-> Void, onError:@escaping (Error)->Void){
         let url = Constants.baseURL + Constants.linkSegmentos
         let request: NSMutableURLRequest = NSMutableURLRequest(url: URL(string: url)!)

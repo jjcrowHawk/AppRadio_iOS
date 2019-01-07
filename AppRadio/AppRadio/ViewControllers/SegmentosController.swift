@@ -61,12 +61,12 @@ class SegmentosController: UIViewController,UITableViewDelegate,UITableViewDataS
                 for seg in segmentos{
                     print("\(seg)")
                     
-                    for hor in seg.horarios{
+                    for hor in seg.horarios!{
                         self.dicSegmentos[hor] = seg
                     }
                 }
                 
-                self.listaSegmentos = self.dicSegmentos.sorted(by: { $0.key.fecha_inicio < $1.key.fecha_inicio })
+                self.listaSegmentos = self.dicSegmentos.sorted(by: { $0.key.fechaInicio! < $1.key.fechaInicio! })
                 
                 
                 self.tablaSegmentos.reloadData()
@@ -92,7 +92,7 @@ class SegmentosController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "segmentoCell", for: indexPath) as! SegmentoTableViewCell
         cell.tituloLabel.text = listaSegmentos[indexPath.row].1.nombre
         //cell.imagenSegmento.image = try UIImage(data: NSData(contentsOf: NSURL(string: segmentos[indexPath.row].imagen)! as URL) as Data)
-        cell.horarioLabel.text = String(format: "%@ - %@", listaSegmentos[indexPath.row].0.fecha_inicio,listaSegmentos[indexPath.row].0.fecha_fin)
+        cell.horarioLabel.text = String(format: "%@ - %@", listaSegmentos[indexPath.row].0.fechaInicio!,listaSegmentos[indexPath.row].0.fechaFin!)
         return cell
     }
     

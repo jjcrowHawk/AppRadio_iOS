@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeEmisoraView" customModule="AppRadio" customModuleProvider="target">
+            <connections>
+                <outlet property="chatButton" destination="ab0-9y-Y7p" id="YiA-ZN-xgr"/>
+                <outlet property="favoritoButton" destination="ABs-Jy-dg3" id="jRG-DK-TOE"/>
+                <outlet property="imgSegmentoActual" destination="zc3-lm-n2g" id="16u-zK-Kgk"/>
+                <outlet property="labelFrecuencia" destination="gtP-IH-hxu" id="RK8-tQ-7pa"/>
+                <outlet property="labelHorarioTransmision" destination="V2L-vv-1rC" id="faz-bz-Cmq"/>
+                <outlet property="labelSegmento" destination="lkT-6N-tyY" id="9eq-T9-Hhp"/>
+                <outlet property="tituloEmisora" destination="QH0-oW-FkR" id="93I-h8-5z8"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jBX-lb-dPU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="293"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-lm-n2g">
+                    <rect key="frame" x="0.0" y="0.0" width="349" height="293"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMISORA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH0-oW-FkR">
+                    <rect key="frame" x="16" y="14" width="317" height="27"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRECUENCIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtP-IH-hxu">
+                    <rect key="frame" x="16" y="49" width="317" height="27"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                    <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-9y-Y7p">
+                    <rect key="frame" x="135" y="90" width="78" height="24"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                    <state key="normal" image="Chat"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-ww-aW5">
+                    <rect key="frame" x="160" y="121" width="29" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.68631988759999996" green="0.68245941399999999" blue="0.68226420880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Segmento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-6N-tyY">
+                    <rect key="frame" x="16" y="159" width="317" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HH:MM - HH:MM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-vv-1rC">
+                    <rect key="frame" x="16" y="191" width="317" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" red="0.68631988759999996" green="0.68245941399999999" blue="0.68226420880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programa Favorito" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E62-Jz-JT1">
+                    <rect key="frame" x="16" y="263" width="317" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.68631988759999996" green="0.68245941399999999" blue="0.68226420880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-Jy-dg3">
+                    <rect key="frame" x="135" y="233" width="79" height="22"/>
+                    <state key="normal" image="Favorito 1"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gtP-IH-hxu" firstAttribute="top" secondItem="QH0-oW-FkR" secondAttribute="bottom" constant="8" id="6eG-cD-inP"/>
+                <constraint firstItem="E62-Jz-JT1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7PE-Xc-aiV"/>
+                <constraint firstAttribute="bottom" secondItem="lkT-6N-tyY" secondAttribute="bottom" constant="110" id="8xG-jp-8Qb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="V2L-vv-1rC" secondAttribute="trailing" constant="16" id="CXL-QO-X6m"/>
+                <constraint firstItem="ABs-Jy-dg3" firstAttribute="top" secondItem="V2L-vv-1rC" secondAttribute="bottom" constant="21" id="CYV-Gh-Tx6"/>
+                <constraint firstItem="ABs-Jy-dg3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="135" id="DCK-S1-ZPP"/>
+                <constraint firstItem="zc3-lm-n2g" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="DZJ-Zn-ujC"/>
+                <constraint firstItem="E62-Jz-JT1" firstAttribute="centerX" secondItem="ABs-Jy-dg3" secondAttribute="centerX" id="Him-iN-8bG"/>
+                <constraint firstItem="ab0-9y-Y7p" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="135" id="JrE-wC-66L"/>
+                <constraint firstItem="V2L-vv-1rC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LKF-5u-YXb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lkT-6N-tyY" secondAttribute="trailing" constant="16" id="N3K-uD-KEa"/>
+                <constraint firstItem="E62-Jz-JT1" firstAttribute="top" secondItem="ABs-Jy-dg3" secondAttribute="bottom" constant="8" symbolic="YES" id="QQQ-Ko-Aic"/>
+                <constraint firstItem="QH0-oW-FkR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QzW-2k-pFp"/>
+                <constraint firstItem="gtP-IH-hxu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="RYR-P9-ftm"/>
+                <constraint firstItem="zc3-lm-n2g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UUu-BD-tTD"/>
+                <constraint firstItem="zc3-lm-n2g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="UaY-sW-6mG"/>
+                <constraint firstItem="ab0-9y-Y7p" firstAttribute="top" secondItem="gtP-IH-hxu" secondAttribute="bottom" constant="14" id="dkX-n2-avU"/>
+                <constraint firstItem="V2L-vv-1rC" firstAttribute="top" secondItem="lkT-6N-tyY" secondAttribute="bottom" constant="8" id="ePS-K2-qSd"/>
+                <constraint firstItem="gtP-IH-hxu" firstAttribute="top" secondItem="QH0-oW-FkR" secondAttribute="bottom" constant="8" id="fbJ-TH-4i4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gtP-IH-hxu" secondAttribute="trailing" constant="16" id="giw-eg-C3B"/>
+                <constraint firstItem="ab0-9y-Y7p" firstAttribute="top" secondItem="gtP-IH-hxu" secondAttribute="bottom" constant="14" id="gzf-kh-HVg"/>
+                <constraint firstItem="ABs-Jy-dg3" firstAttribute="top" secondItem="V2L-vv-1rC" secondAttribute="bottom" constant="21" id="ig0-5k-Iva"/>
+                <constraint firstItem="lkT-6N-tyY" firstAttribute="centerX" secondItem="ox0-ww-aW5" secondAttribute="centerX" id="lNS-gg-nAH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ab0-9y-Y7p" secondAttribute="trailing" constant="136" id="tHh-HB-bwe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ABs-Jy-dg3" secondAttribute="trailing" constant="135" id="th6-zf-Y2q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QH0-oW-FkR" secondAttribute="trailing" constant="16" id="txG-xD-voC"/>
+                <constraint firstItem="V2L-vv-1rC" firstAttribute="top" secondItem="lkT-6N-tyY" secondAttribute="bottom" constant="8" id="uGC-Z5-CB0"/>
+                <constraint firstItem="lkT-6N-tyY" firstAttribute="top" secondItem="ox0-ww-aW5" secondAttribute="bottom" constant="23" id="v4u-RB-Oy1"/>
+                <constraint firstItem="lkT-6N-tyY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="w0x-Zs-TYC"/>
+                <constraint firstItem="QH0-oW-FkR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="wHi-Jr-rWL"/>
+                <constraint firstItem="zc3-lm-n2g" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="wa7-8P-2uy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="20.5" y="-94.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Chat" width="24" height="24"/>
+        <image name="Favorito 1" width="25" height="22"/>
+    </resources>
+</document>

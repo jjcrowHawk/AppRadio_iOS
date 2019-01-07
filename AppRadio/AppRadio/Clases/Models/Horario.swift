@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Horario: Codable,CustomStringConvertible,Hashable{
+
+class Horario : NSObject, NSCoding, Mappable{
     
+    var dia : String?
+    var fechaFin : String?
+    var fechaInicio : String?
     
-    var fecha_inicio: String
-    var fecha_fin: String
-    var dia: String
-    
+    override
     var description: String{
         var string = "Horario{ \n"
         let mirror = Mirror(reflecting: self)
@@ -25,17 +27,51 @@ class Horario: Codable,CustomStringConvertible,Hashable{
         }
         string += "}\n"
         return string
+        
     }
     
-    var hashValue: Int{ return ObjectIdentifier(self).hashValue }
-    static func ==(lhs: Horario, rhs: Horario) -> Bool {
-        return lhs === rhs
+    class func newInstance(map: Map) -> Mappable?{
+        return Horario()
+    }
+    private override init(){}
+    required init?(map: Map){}
+    
+    func mapping(map: Map)
+    {
+        dia <- map["dia"]
+        fechaFin <- map["fecha_fin"]
+        fechaInicio <- map["fecha_inicio"]
+        
     }
     
-    required init(fecha_inicio:String, fecha_fin: String, dia: String){
-        self.fecha_inicio=fecha_inicio;
-        self.fecha_fin=fecha_fin;
-        self.dia=dia;
+    /**
+     * NSCoding required initializer.
+     * Fills the data from the passed decoder
+     */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+        dia = aDecoder.decodeObject(forKey: "dia") as? String
+        fechaFin = aDecoder.decodeObject(forKey: "fecha_fin") as? String
+        fechaInicio = aDecoder.decodeObject(forKey: "fecha_inicio") as? String
+        
+    }
+    
+    /**
+     * NSCoding required method.
+     * Encodes mode properties into the decoder
+     */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if dia != nil{
+            aCoder.encodeConditionalObject(dia, forKey: "dia")
+        }
+        if fechaFin != nil{
+            aCoder.encodeConditionalObject(fechaFin, forKey: "fecha_fin")
+        }
+        if fechaInicio != nil{
+            aCoder.encodeConditionalObject(fechaInicio, forKey: "fecha_inicio")
+        }
+        
     }
     
 }

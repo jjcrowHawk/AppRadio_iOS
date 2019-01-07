@@ -23,6 +23,8 @@
 		04CB147921908D180059A64D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147821908D180059A64D /* RegisterController.swift */; };
 		04CB147B2190AF230059A64D /* LogInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147A2190AF230059A64D /* LogInUser.swift */; };
 		04CB147D2190B2EE0059A64D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB147C2190B2EE0059A64D /* Token.swift */; };
+		6439BFF021E2BFC5008E6FAA /* HomeEmisoraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6439BFEF21E2BFC5008E6FAA /* HomeEmisoraView.xib */; };
+		6439BFF221E2C028008E6FAA /* HomeEmisoraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6439BFF121E2C028008E6FAA /* HomeEmisoraView.swift */; };
 		643F167E2162CAD100A71145 /* SegmentosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643F167D2162CAD100A71145 /* SegmentosController.swift */; };
 		645EA28221E1866400E813D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645EA28021E1866300E813D5 /* Alamofire.framework */; };
 		645EA28321E1866400E813D5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645EA28121E1866300E813D5 /* AlamofireImage.framework */; };
@@ -93,6 +95,8 @@
 		04CB147821908D180059A64D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		04CB147A2190AF230059A64D /* LogInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUser.swift; sourceTree = "<group>"; };
 		04CB147C2190B2EE0059A64D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		6439BFEF21E2BFC5008E6FAA /* HomeEmisoraView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmisoraView.xib; sourceTree = "<group>"; };
+		6439BFF121E2C028008E6FAA /* HomeEmisoraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmisoraView.swift; sourceTree = "<group>"; };
 		643F167D2162CAD100A71145 /* SegmentosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentosController.swift; sourceTree = "<group>"; };
 		645EA28021E1866300E813D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		645EA28121E1866300E813D5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6439BFEE21E2BF89008E6FAA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6439BFEF21E2BFC5008E6FAA /* HomeEmisoraView.xib */,
+				6439BFF121E2C028008E6FAA /* HomeEmisoraView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		643F167C2162CA4B00A71145 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +316,7 @@
 		BBA2FC6D215AF2B6004A8C03 /* AppRadio */ = {
 			isa = PBXGroup;
 			children = (
+				6439BFEE21E2BF89008E6FAA /* CustomViews */,
 				6491A30021E2A25200E890D8 /* Libs */,
 				64AD536E2164889100142997 /* Clases */,
 				64AD536B21641C8500142997 /* Utils */,
@@ -463,6 +477,7 @@
 				040A3F7521DDEB4C00A08C99 /* icon_password.png in Resources */,
 				64BF92862160404400D46843 /* navigation_emisora.png in Resources */,
 				64BF92842160404400D46843 /* stop_button.png in Resources */,
+				6439BFF021E2BFC5008E6FAA /* HomeEmisoraView.xib in Resources */,
 				64BF928A2160404400D46843 /* vecina.jpeg in Resources */,
 				040A3F6321DDB8A800A08C99 /* splash_screen.png in Resources */,
 				04CB1475219087540059A64D /* portada_radio.jpg in Resources */,
@@ -525,6 +540,7 @@
 				64AD536D21641CAF00142997 /* NotificationManager.swift in Sources */,
 				BBA2FC6F215AF2B6004A8C03 /* AppDelegate.swift in Sources */,
 				64AD537E2186CD7D00142997 /* Horario.swift in Sources */,
+				6439BFF221E2C028008E6FAA /* HomeEmisoraView.swift in Sources */,
 				04CB147921908D180059A64D /* RegisterController.swift in Sources */,
 				04CB147D2190B2EE0059A64D /* Token.swift in Sources */,
 				040A3F6D21DDD94A00A08C99 /* TextFieldLogin.swift in Sources */,
