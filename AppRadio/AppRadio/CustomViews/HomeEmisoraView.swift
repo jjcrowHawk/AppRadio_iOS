@@ -35,6 +35,9 @@ class HomeEmisoraView: UIView {
         addSubview(view)
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.layer.borderWidth = 2.5
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.cornerRadius = 10.0
     }
     
     /*

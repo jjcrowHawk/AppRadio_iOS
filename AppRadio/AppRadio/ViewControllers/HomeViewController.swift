@@ -18,16 +18,16 @@ class HomeViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
     //properties
     var items : [Int] = [1,2,3,4,5]
     var emisorasDataset : [Emisora] = []
-    var reproduccionDataset :Dictionary<Emisora,Segmento> = [:]
-    var datasetEmisoraSegmento: [(Emisora,Segmento)] = []
+    var reproduccionDataset :Dictionary<Emisora,Segmento?> = [:]
+    var datasetEmisoraSegmento: [(Emisora,Segmento?)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         RestAPIManager.obtenerEmisoras(onSuccess: {emisoras in DispatchQueue.main.async {
-            print(emisoras)
+            print("EMISORAS OBTENIDAS")
             self.emisorasDataset = emisoras
-            self.carousel.reloadData()
+            //self.carousel.reloadData()
         }},
             onError: {error in
                 print("\(error): \(error.localizedDescription)")
@@ -35,7 +35,6 @@ class HomeViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         )
         
         RestAPIManager.obtenerSegmentosDelDia(onSuccess: {segmentos in DispatchQueue.main.async{
-            print(segmentos)
             if self.emisorasDataset.count != 0 {
                 for emisora in self.emisorasDataset{
                     for segmento in segmentos{
@@ -45,14 +44,19 @@ class HomeViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
                         }
                     }
                     if self.reproduccionDataset[emisora] == nil{
-                        self.reproduccionDataset[emisora] = nil
+
+                        self.reproduccionDataset[emisora] = nil as Segmento?
                     }
                 }
-                 self.datasetEmisoraSegmento = self.reproduccionDataset.sorted(by: { $0.key.nombre! < $1.key.nombre! })
+                
+                self.datasetEmisoraSegmento = self.reproduccionDataset.sorted(by: { $0.key.nombre! < $1.key.nombre! })
+                print(self.datasetEmisoraSegmento.count)
+                print(self.emisorasDataset.count)
                 self.carousel.reloadData()
             }
         }}, onError: {error in
             print("\(error): \(error.localizedDescription)")
+            self.carousel.reloadData()
         })
         
         carousel.type = .rotary
@@ -71,14 +75,26 @@ class HomeViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = HomeEmisoraView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         
-        if reproduccionDataset.count != 0{
+        if datasetEmisoraSegmento.count != 0{
             let datasetIndex = self.reproduccionDataset.index(self.reproduccionDataset.startIndex, offsetBy: index)
             view.tituloEmisora.text = self.datasetEmisoraSegmento[index].0.nombre//self.reproduccionDataset[datasetIndex].key.nombre
             view.labelFrecuencia.text = self.datasetEmisoraSegmento[index].0.frecuenciaDial //self.reproduccionDataset[datasetIndex].key.frecuenciaDial
             if(self.datasetEmisoraSegmento[index].1 != nil){
-                view.labelSegmento.text = self.datasetEmisoraSegmento[index].1.nombre//self.reproduccionDataset[datasetIndex].value.nombre
-                view.labelHorarioTransmision.text = "\(self.datasetEmisoraSegmento[index].1.horarios![0].fechaInicio) - \(self.datasetEmisoraSegmento[index].1.horarios![0].fechaFin)"
-                //"\(self.reproduccionDataset[datasetIndex].value.horarios![0].fechaInicio) - \(self.reproduccionDataset[datasetIndex].value.horarios![0].fechaFin)"
+                view.labelSegmento.text = self.datasetEmisoraSegmento[index].1?.nombre//self.reproduccionDataset[datasetIndex].value.nombre
+                view.labelHorarioTransmision.text = "\(self.datasetEmisoraSegmento[index].1?.horarios![0].fechaInicio) - \(self.datasetEmisoraSegmento[index].1?.horarios![0].fechaFin)"
+                Alamofire.request((self.datasetEmisoraSegmento[index].1?.imagen)!).responseImage(completionHandler: {response in
+                    let filter = BlurFilter(blurRadius: 1)
+                    view.imgSegmentoActual.image = filter.filter(response.result.value!)
+                })
+            }
+            else{
+                view.labelSegmento.text = "Informacion no disponible"
+                view.labelHorarioTransmision.isHidden = true
+                
+                Alamofire.request(emisorasDataset[index].logotipo!).responseImage(completionHandler: {response in
+                    let filter = BlurFilter(blurRadius: 1)
+                    view.imgSegmentoActual.image = filter.filter(response.result.value!)
+                })
             }
         }
         else{
@@ -86,12 +102,12 @@ class HomeViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
             view.labelFrecuencia.text = emisorasDataset[index].frecuenciaDial
             view.labelSegmento.text = "Informacion no disponible"
             view.labelHorarioTransmision.isHidden = true
+            
+            Alamofire.request(emisorasDataset[index].logotipo!).responseImage(completionHandler: {response in
+                let filter = BlurFilter(blurRadius: 1)
+                view.imgSegmentoActual.image = filter.filter(response.result.value!)
+            })
         }
-        
-        Alamofire.request(emisorasDataset[index].logotipo!).responseImage(completionHandler: {response in
-            let filter = BlurFilter(blurRadius: 1)
-            view.imgSegmentoActual.image = filter.filter(response.result.value!)
-        })
         
         return view
     }
