@@ -18,6 +18,7 @@ class HomeEmisoraView: UIView {
     @IBOutlet weak var labelHorarioTransmision: UILabel!
     @IBOutlet weak var favoritoButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
+    @IBOutlet weak var labelProgramaFavorito: UILabel!
     
     override
     init(frame: CGRect) {                   //Metodo para iniciar  por codigo
